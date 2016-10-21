@@ -51,9 +51,12 @@ print("1 ++++++++++")
 d3 = Subclass3()
 print("2 ==========")
 d3.f1()
+print(d3.v)
 '''
 1 在执行过程中是按照定义时的类签名基类生命顺序执行的.
 2 在某个基类中如果没有super的调用则迭代终止,如果将subclass2中的f1中的super注释掉,则base中的f1不会被调用
 3 在super的整个调用过程中self指向的都是当前对象,不是父类的一个实例,和java是一直的,依据是各个层次的输出中self.v都是subclass3
 '''
 print("2 ++++++++++")
+
+print("Subclass3.__mro__ : ", Subclass3.__mro__)
