@@ -72,21 +72,4 @@ test3()
 # z=0
 
 
-class  Base4Override:
-    def f1(self):
-        print "In class Base"
 
-class Derived4Override(Base4Override):
-
-
-    def f1(self):
-        print "In class Subclass"
-
-    def f1(self, x, y):
-        print "In subsclass f1 with 2 parameter"
-
-
-
-d=Derived4Override()
-d.f1()
-d.f1(1, 2)
